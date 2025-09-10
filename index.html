@@ -1,0 +1,60 @@
+<!--idea to make a  movie exploered using external api-->
+<!-- use HTML, CSS, Javascript and OMDb API.-->
+<!-- would be good on git/cv-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="banner">
+        <h1>Movie Explorer</h1>
+    </div>
+    <hr>
+    <div id="searcher">
+    <div class="input-row">
+        <label for="titleSearch">Title:</label>
+        <input type="text" id="titleSearch" placeholder="Back to the Future">
+
+        <label for="YearSearch">Year:</label>
+        <input type="text" id="YearSearch" placeholder="1985">
+
+        <label for="plotSearch">Plot:</label>
+        <select id="plotSearch" name="plotLength">
+            <option value="short">Short</option>
+            <option value="long">Long</option>
+        </select>
+    </div>
+    <div class="buttons-row">
+        <input class="buttons" id="searchButton" type="button" value="Search" onClick="searchClicked()">
+        <input class="buttons" id="resetButton" type="button" value="Reset" onClick="resetClicked()">
+    </div>
+</div>
+
+    <hr>
+    <div id="movieInfo">
+        <p id="movieTitle"></p>
+        <p id="movieYear"></p>
+        <p id="movieRated"></p>
+        <p id="movieReleased"></p>
+        <p id="movieRuntime"></p>
+        <p id="movieGenre"></p>
+        <p id="movieDirector"></p>
+        <p id="movieWriter"></p>
+        <p id="movieActors"></p>
+        <p id="moviePlot"></p>
+        <p id="movieAwards"></p>
+        <img id="moviePoster"></img>
+        <p id="movieRatings"></p>
+        <p id="movieBoxOffice"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

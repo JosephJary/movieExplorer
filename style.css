@@ -1,0 +1,65 @@
+html{
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+   
+}
+#banner {
+    margin: 20px auto;                /* Center horizontally */
+    text-align: center;
+    font-weight: 500;                  /* Medium weight */
+    color: #333;                       /* Dark grey text */
+    font-size: 22px;                   /* Slightly bigger for banner */
+}
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ccc, transparent);
+    margin: 20px 0;
+}
+
+#searcher {
+    border: 1px solid #ddd;           /* Thin light grey border */
+    border-radius: 8px;               /* Slightly rounded corners */
+    background-color: #f5f5f5;        /* Subtle flat grey */
+    padding: 16px 20px;
+    max-width: 35%;
+    margin: 20px auto;                /* Center horizontally */
+}
+
+#searcher label {
+    margin-right: 6px;
+    font-weight: 500;
+    color: #333;                      /* Dark grey text */
+}
+
+#searcher input[type="text"], 
+#searcher select {
+    margin: 6px 10px 12px 0;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+#searcher .buttons {
+    margin: 8px 8px 0 0;
+    padding: 6px 14px;
+    border: 1px solid #0077cc;
+    border-radius: 6px;
+    background-color: #0077cc;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s;
+}
+
+#searcher .buttons:hover {
+    background-color: #005fa3;
+    border-color: #005fa3;
+}
+
+
+
+
