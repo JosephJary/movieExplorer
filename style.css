@@ -60,6 +60,61 @@ hr {
     border-color: #005fa3;
 }
 
+#movieInfo {
+    display: none;                  /* Poster on left, text on right */
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    padding: 16px 20px;
+    max-width: 70%;
+    margin: 20px auto;
+    gap: 20px;                      /* Space between poster & text */
+}
+
+#moviePoster {
+    max-width: 180px;
+    height: auto;
+    border-radius: 6px;
+    flex-shrink: 0;                 /* Prevent shrinking */
+}
+
+#movieDetails {
+    flex: 1;                        /* Take remaining space */
+}
+
+#movieHeader {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+#movieHeader h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+}
+
+#movieHeader span {
+    font-size: 16px;
+    color: #666;
+}
+
+#movieDetails p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+#movieH3{
+    display:none;
+}
+
+
+
+
 
 
 
