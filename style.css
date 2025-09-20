@@ -1,15 +1,16 @@
-html{
-   text-align: center;
+html {
    font-family: Arial, Helvetica, sans-serif;
-   
 }
+
+/* Keep the banner centered */
 #banner {
-    margin: 20px auto;                /* Center horizontally */
-    text-align: center;
-    font-weight: 500;                  /* Medium weight */
-    color: #333;                       /* Dark grey text */
-    font-size: 22px;                   /* Slightly bigger for banner */
+    margin: 20px auto;
+    text-align: center;   /* only the banner text is centered */
+    font-weight: 500;
+    color: #333;
+    font-size: 22px;
 }
+
 hr {
     border: none;
     height: 1px;
@@ -18,18 +19,19 @@ hr {
 }
 
 #searcher {
-    border: 1px solid #ddd;           /* Thin light grey border */
-    border-radius: 8px;               /* Slightly rounded corners */
-    background-color: #f5f5f5;        /* Subtle flat grey */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f5f5f5;
     padding: 16px 20px;
     max-width: 35%;
-    margin: 20px auto;                /* Center horizontally */
+    margin: 20px auto;
+    text-align: center; /* search box contents still look good centered */
 }
 
 #searcher label {
     margin-right: 6px;
     font-weight: 500;
-    color: #333;                      /* Dark grey text */
+    color: #333;
 }
 
 #searcher input[type="text"], 
@@ -60,8 +62,9 @@ hr {
     border-color: #005fa3;
 }
 
+/* Movie Info */
 #movieInfo {
-    display: none;                  /* Poster on left, text on right */
+    display: none;           
     align-items: flex-start;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -69,18 +72,44 @@ hr {
     padding: 16px 20px;
     max-width: 70%;
     margin: 20px auto;
-    gap: 20px;                      /* Space between poster & text */
+    gap: 20px;
+    text-align: left;           /* <-- force details to align left */
 }
 
 #moviePoster {
     max-width: 180px;
     height: auto;
     border-radius: 6px;
-    flex-shrink: 0;                 /* Prevent shrinking */
+    flex-shrink: 0;
 }
 
 #movieDetails {
-    flex: 1;                        /* Take remaining space */
+    display: block;         /* show movie details when needed */
+    position: relative;     /* required for absolute positioning of button */
+    flex: 1;
+}
+
+/* Favourite button styling */
+#favButton {
+    position: absolute;        /* top-right of card */
+    top: 10px;
+    right: 10px;
+    background-color: transparent; /* no ugly yellow background */
+    border: none;
+    cursor: pointer;
+    font-size: 24px;           /* star size */
+    color: #ffcc00;            /* gold star color */
+    transition: transform 0.2s, color 0.2s;
+}
+
+#favButton:hover {
+    transform: scale(1.2);     /* grow a bit on hover */
+    color: #ff9900;            /* darker gold on hover */
+}
+
+#favButton:active {
+    transform: scale(1);
+    color: #ffcc00;
 }
 
 #movieHeader {
@@ -108,13 +137,101 @@ hr {
     color: #333;
 }
 
-#movieH3{
-    display:none;
+#movieH3 {
+    display: none;
+    text-align: left;   /* makes heading align left with box */
+    max-width: 70%;
+    margin: 20px auto 10px;
+}
+#movieDetails strong {
+    color: #111;
+    font-weight: 600;
+    margin-right: 4px;
+}
+#errorMessage {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none; /* hidden until needed */
+}
+#favButton{
+    float:right;
+    padding:none;
 }
 
+#favouriteMovies {
+    display:none;
+    max-width: 70%;
+    margin: 20px auto;
+    padding: 16px 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
 
+#favouriteMovies h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    text-align: left;
+    font-size: 18px;
+    color: #222;
+}
 
+.favMovie {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 12px;
+}
 
+.favMovie img {
+    width: 100px;
+    height: auto;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
 
+.favMovieDetails {
+    flex: 1;
+}
+
+.favMovieDetails h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+}
+
+.favMovieDetails p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+#displayFavourite {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #0077cc; /* matches your search buttons */
+    border: 1px solid #0077cc;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s;
+}
+
+#displayFavourite:hover {
+    background-color: #005fa3;
+    border-color: #005fa3;
+}
+
+#displayFavourite:active {
+    background-color: #004880;
+    border-color: #004880;
+}
 
 

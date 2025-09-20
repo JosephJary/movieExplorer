@@ -1,8 +1,3 @@
-<!--idea to make a  movie exploered using external api-->
-<!-- use HTML, CSS, Javascript and OMDb API.-->
-<!-- would be good on git/cv-->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="banner">
+    <div id="banner"> <!-- banner part of the website with the title and favourite button-->
         <h1>Movie Explorer</h1>
+        <button id="displayFavourite" onclick="displayFavourites()">Favourites</button>
     </div>
+
     <hr>
-    <div id="searcher">
+
+    <div id="searcher"> <!--the search part where you search title, year and plot with search and reset buttons -->
     <div class="input-row">
         <label for="titleSearch">Title:</label>
         <input type="text" id="titleSearch" placeholder="Back to the Future">
@@ -34,11 +32,14 @@
         <input class="buttons" id="searchButton" type="button" value="Search" onClick="searchClicked()">
         <input class="buttons" id="resetButton" type="button" value="Reset" onClick="resetClicked()">
     </div>
+
+    <p id="errorMessage"></p> <!-- just an error message for when nothing has been enetered into the search-->
+
 </div>
 
 <hr>
 
-<h3 id="movieH3">Movie Information</h3>
+<h3 id="movieH3">Movie Information</h3> <!-- has all the movie information that is going to get displayed-->
 <div id="movieInfo">
     <img id="moviePoster">
     <div id="movieDetails">
@@ -47,20 +48,29 @@
             <span id="movieYear"></span>
             <p id="movieRated"></p>
         </div>
+        <button id="favButton" onclick="addToFavourites()">⭐</button>
 
-        <p id="movieRated"></p>
-        <p id="movieReleased"></p>
-        <p id="movieRuntime"></p>
-        <p id="movieGenre"></p>
-        <p id="movieDirector"></p>
-        <p id="movieWriter"></p>
-        <p id="movieActors"></p>
-        <p id="moviePlot"></p>
-        <p id="movieAwards"></p>
-        <p id="movieRatings"></p>
-        <p id="movieBoxOffice"></p>
+
+        <p><span id="movieRated"></span></p>
+        <p><strong>Released:</strong> <span id="movieReleased"></span></p>
+        <p><strong>Runtime:</strong> <span id="movieRuntime"></span></p>
+        <p><strong>Genre:</strong> <span id="movieGenre"></span></p>
+        <p><strong>Director:</strong> <span id="movieDirector"></span></p>
+        <p><strong>Writer:</strong> <span id="movieWriter"></span></p>
+        <p><strong>Starring:</strong> <span id="movieActors"></span></p>
+        <p><strong>Plot:</strong> <span id="moviePlot"></span></p>
+        <p><strong>Awards:</strong> <span id="movieAwards"></span></p>
+        <p><strong>IMDb Rating:</strong> <span id="movieRatings"></span></p>
+        <p><strong>Box Office:</strong> <span id="movieBoxOffice"></span></p>
+
     </div>
 </div>
+
+<div id="favouriteMovies"> <!-- where all the favourite movies are displayed-->
+    <h3>Favourite Movies</h3>
+    
+</div>
+
 
 
 
